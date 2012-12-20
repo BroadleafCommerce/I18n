@@ -19,8 +19,9 @@ package org.broadleafcommerce.core.order.domain;
 import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
-import org.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation;
-import org.broadleafcommerce.i18n.domain.order.I18NFulfillmentOption;
+
+import com.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation;
+import com.broadleafcommerce.i18n.domain.order.I18NFulfillmentOption;
 
 import javax.persistence.Embedded;
 

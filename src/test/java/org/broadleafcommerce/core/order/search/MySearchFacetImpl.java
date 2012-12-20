@@ -20,8 +20,9 @@ import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 import org.broadleafcommerce.core.search.domain.SearchFacetImpl;
-import org.broadleafcommerce.i18n.domain.search.I18NSearchFacet;
-import org.broadleafcommerce.i18n.domain.search.SearchFacetTranslation;
+
+import com.broadleafcommerce.i18n.domain.search.I18NSearchFacet;
+import com.broadleafcommerce.i18n.domain.search.SearchFacetTranslation;
 
 import javax.persistence.Embedded;
 

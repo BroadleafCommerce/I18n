@@ -20,8 +20,9 @@ import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 import org.broadleafcommerce.core.catalog.domain.ProductOptionValueImpl;
-import org.broadleafcommerce.i18n.domain.catalog.I18NProductOptionValue;
-import org.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslation;
+
+import com.broadleafcommerce.i18n.domain.catalog.I18NProductOptionValue;
+import com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslation;
 
 import javax.persistence.Embedded;
 

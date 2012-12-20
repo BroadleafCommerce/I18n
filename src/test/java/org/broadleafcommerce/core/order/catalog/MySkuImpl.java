@@ -20,8 +20,9 @@ import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 import org.broadleafcommerce.core.catalog.domain.SkuImpl;
-import org.broadleafcommerce.i18n.domain.catalog.I18NSku;
-import org.broadleafcommerce.i18n.domain.catalog.SkuTranslation;
+
+import com.broadleafcommerce.i18n.domain.catalog.I18NSku;
+import com.broadleafcommerce.i18n.domain.catalog.SkuTranslation;
 
 import javax.persistence.Embedded;
 
