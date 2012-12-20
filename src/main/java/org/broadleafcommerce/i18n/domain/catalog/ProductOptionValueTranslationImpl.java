@@ -18,8 +18,6 @@ package org.broadleafcommerce.i18n.domain.catalog;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.broadleafcommerce.common.locale.domain.Locale;
-import org.broadleafcommerce.common.locale.domain.LocaleImpl;
 import org.broadleafcommerce.common.presentation.AdminPresentation;
 import org.broadleafcommerce.common.presentation.AdminPresentationClass;
 import org.broadleafcommerce.common.presentation.PopulateToOneFieldsEnum;
@@ -34,8 +32,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Transient;
@@ -57,8 +53,8 @@ public class ProductOptionValueTranslationImpl implements java.io.Serializable, 
     private static final Log LOG = LogFactory.getLog(ProductOptionValueTranslationImpl.class);
 
     @Id
-    @GeneratedValue(generator = "ProductOptionTranslationID", strategy = GenerationType.TABLE)
-    @TableGenerator(name = "ProductOptionTranslationID", table = "SEQUENCE_GENERATOR", pkColumnName = "ID_NAME", valueColumnName = "ID_VAL", pkColumnValue = "ProductOptionValueTranslationImpl_AttributeValue", allocationSize = 50)
+    @GeneratedValue(generator = "ProductOptionValueTranslationID", strategy = GenerationType.TABLE)
+    @TableGenerator(name = "ProductOptionValueTranslationID", table = "SEQUENCE_GENERATOR", pkColumnName = "ID_NAME", valueColumnName = "ID_VAL", pkColumnValue = "ProductOptionValueTranslationID", allocationSize = 50)
     @Column(name = "TRANSLATION_ID")
     @AdminPresentation(friendlyName = "ProductOptionTranslationImpl_ID", order = 1, group = "ProductOptionValueTranslationImpl_AttributeValue", groupOrder = 1, visibility = VisibilityEnum.HIDDEN_ALL)
     protected Long id;

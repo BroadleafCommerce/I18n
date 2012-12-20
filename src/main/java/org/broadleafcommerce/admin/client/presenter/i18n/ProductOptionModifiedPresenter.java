@@ -52,6 +52,7 @@ public class ProductOptionModifiedPresenter extends ModifiedPresenterAdapter {
     @Override
     public void bind() {
         translationsPresenter.bind();
+        translationsPresenter.setReadOnly(false);
         ((ProductOptionPresenter) getParentPresenter()).getDisplay().getProductOptionValueDisplay().getGrid().addSelectionChangedHandler(new SelectionChangedHandler() {
             @Override
             public void onSelectionChanged(SelectionEvent event) {
@@ -70,7 +71,7 @@ public class ProductOptionModifiedPresenter extends ModifiedPresenterAdapter {
 
     @Override
     public void setup() {
-        getParentPresenter().getPresenterSequenceSetupManager().addOrReplaceItem(new PresenterSetupItem("productOptionValueTranslationMapDS", new ProductOptionTranslationMapDataSourceFactory(getParentPresenter()), new AsyncCallbackAdapter() {
+        getParentPresenter().getPresenterSequenceSetupManager().addOrReplaceItem(new PresenterSetupItem("productOptionTranslationMapDS", new ProductOptionTranslationMapDataSourceFactory(getParentPresenter()), new AsyncCallbackAdapter() {
             @Override
             public void onSetupSuccess(DataSource result) {
                 translationsPresenter = new MapStructurePresenter("", ((ProductOptionModiferView) getDisplay()).getTranslationsDisplay(), getMediaEntityView(), BLCMain.getMessageManager().getString("newMediaTitle"));

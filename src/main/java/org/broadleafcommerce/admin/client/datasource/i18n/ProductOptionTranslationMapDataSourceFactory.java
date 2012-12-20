@@ -39,7 +39,7 @@ import com.smartgwt.client.data.DataSource;
  */
 public class ProductOptionTranslationMapDataSourceFactory implements DataSourceFactory {
 
-    public static final MapStructure MAPSTRUCTURE = new MapStructure(String.class.getName(), "key", "Key", EntityImplementations.PRODUCT_OPTION_VALUE_TRANSLATION, "translations", true);
+    public static final MapStructure MAPSTRUCTURE = new MapStructure(String.class.getName(), "key", "Key", EntityImplementations.PRODUCT_OPTION_VALUE_TRANSLATION, "i18nExtension.translations", true);
 
     public static ComplexValueMapStructureDataSource dataSource = null;
 

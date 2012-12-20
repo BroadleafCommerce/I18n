@@ -22,5 +22,5 @@
     </bean>
     
 	<context:component-scan base-package="org.broadleafcommerce.i18n"/>
-
+	
 </beans>

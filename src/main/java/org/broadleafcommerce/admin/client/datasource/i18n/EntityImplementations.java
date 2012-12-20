@@ -22,7 +22,7 @@ package org.broadleafcommerce.admin.client.datasource.i18n;
  */
 public class EntityImplementations {
     
-    public static final String PRODUCT_OPTION_VALUE_TRANSLATION = "org.broadleafcommerce.core.catalog.domain.ProductOptionValueTranslationImpl";
-    public static final String SKU_TRANSLATION = "org.broadleafcommerce.core.catalog.domain.SkuTranslationImpl";
+    public static final String PRODUCT_OPTION_VALUE_TRANSLATION = "org.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslationImpl";
+    public static final String SKU_TRANSLATION = "org.broadleafcommerce.i18n.domain.catalog.SkuTranslationImpl";
 
 }

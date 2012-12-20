@@ -16,6 +16,7 @@
 
 package org.broadleafcommerce.admin.client.presenter.i18n;
 
+import org.broadleafcommerce.openadmin.client.BLCMain;
 import org.broadleafcommerce.openadmin.client.view.ViewModifierAdapter;
 import org.broadleafcommerce.openadmin.client.view.dynamic.SubItemView;
 import org.broadleafcommerce.openadmin.client.view.dynamic.form.FormBuilder;
@@ -41,8 +42,11 @@ public class ProductOptionModiferView extends ViewModifierAdapter {
 
     @Override
     public void build(List<DataSource> dataSourcesList) {
+        translationsDisplay = new GridStructureView(BLCMain.getMessageManager().getString("productOptionImpl_Translations"), true, true);
+        //the id "productOptionValueTabSubView" must match in the ProductOptionView.java
         SubItemView topTabSet = (SubItemView) FormBuilder.findMemberById((Layout) getParentView(), "productOptionValueTabSubView");
         ((FormOnlyView) topTabSet.getFormOnlyDisplay()).addMember(translationsDisplay);
+      
     }
 
     public GridStructureDisplay getTranslationsDisplay() {
