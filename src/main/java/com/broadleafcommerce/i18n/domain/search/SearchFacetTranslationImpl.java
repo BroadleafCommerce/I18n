@@ -34,7 +34,7 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "BLC_SEARCH_FACET_TRANSLATION")
+@Table(name = "BLC_SEARCH_FACET_TR")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "SearchFacetTranslationImpl_friendyName")
 public class SearchFacetTranslationImpl implements java.io.Serializable, SearchFacetTranslation {
@@ -48,11 +48,11 @@ public class SearchFacetTranslationImpl implements java.io.Serializable, SearchF
     @GeneratedValue(generator = "SearchFacetTranslationID", strategy = GenerationType.TABLE)
     @TableGenerator(name = "SearchFacetTranslationID", table = "SEQUENCE_GENERATOR", pkColumnName = "ID_NAME", valueColumnName = "ID_VAL", pkColumnValue = "SearchFacetTranslationImpl_Label", allocationSize = 50)
     @Column(name = "TRANSLATION_ID")
-    @AdminPresentation(friendlyName = "SearchFacetTranslationImpl_ID", order = 1, group = "SearchFacetTranslationImpl_Label", groupOrder = 1, visibility = VisibilityEnum.HIDDEN_ALL)
+    @AdminPresentation(friendlyName = "SearchFacetTranslationImpl_ID", order = 1, group = "SearchFacetTranslationImpl_Details", groupOrder = 1, visibility = VisibilityEnum.HIDDEN_ALL)
     protected Long id;
 
     @Column(name = "LABEL", nullable = false)
-    @AdminPresentation(friendlyName = "SearchFacetTranslationImpl_Label", order = 2, group = "SearchFacetTranslationImpl_Label", prominent = true, groupOrder = 1)
+    @AdminPresentation(friendlyName = "SearchFacetTranslationImpl_Label", order = 2, group = "SearchFacetTranslationImpl_Details", prominent = true, groupOrder = 1)
     protected String label;
 
     @Override

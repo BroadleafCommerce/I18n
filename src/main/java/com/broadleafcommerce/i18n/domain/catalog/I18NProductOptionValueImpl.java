@@ -42,7 +42,7 @@ import java.util.Map;
 public class I18NProductOptionValueImpl implements I18NProductOptionValue {
     
     @ManyToMany(targetEntity = ProductOptionValueTranslationImpl.class)
-    @JoinTable(name = "BLC_PRODUCT_OPTION_VALUE_TRANSLATION_XREF",
+    @JoinTable(name = "BLC_PRODUCT_OPTION_VAL_TRXREF",
             joinColumns = @JoinColumn(name = "PRODUCT_OPTION_VALUE_ID", referencedColumnName = "PRODUCT_OPTION_VALUE_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
     @Cascade(value={org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})

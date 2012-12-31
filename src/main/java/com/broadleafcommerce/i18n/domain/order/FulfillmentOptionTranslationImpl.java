@@ -43,7 +43,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "BLC_FULFILLMENT_OPTION_TRANSLATION")
+@Table(name = "BLC_FULFILLMENT_OPTION_TR")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "FulfillmentOptionTranslationImpl_friendyName")
 public class FulfillmentOptionTranslationImpl implements java.io.Serializable, FulfillmentOptionTranslation {

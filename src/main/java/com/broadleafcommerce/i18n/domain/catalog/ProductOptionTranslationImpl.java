@@ -48,7 +48,7 @@ import org.hibernate.annotations.Index;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "BLC_PRODUCT_OPTION_TRANSLATION")
+@Table(name = "BLC_PRODUCT_OPTION_TR")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "ProductOptionTranslationImpl_friendyName")
 public class ProductOptionTranslationImpl implements java.io.Serializable, ProductOptionTranslation {
@@ -66,7 +66,7 @@ public class ProductOptionTranslationImpl implements java.io.Serializable, Produ
     protected Long id;
 
     @Column(name = "LABEL", nullable = false)
-    @AdminPresentation(friendlyName = "ProductOptionImpl_Label", order = 3, group = "ProductOptionTranslationImpl_Label", prominent = true, groupOrder = 1)
+    @AdminPresentation(friendlyName = "ProductOptionTranslationImpl_Label", order = 3, group = "ProductOptionTranslationImpl_Label", prominent = true, groupOrder = 1)
     protected String label;
 
     @Override

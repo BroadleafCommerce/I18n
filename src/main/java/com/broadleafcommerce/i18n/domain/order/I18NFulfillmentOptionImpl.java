@@ -40,7 +40,7 @@ import java.util.Map;
 public class I18NFulfillmentOptionImpl implements I18NFulfillmentOption {
 
     @ManyToMany(targetEntity = FulfillmentOptionTranslationImpl.class)
-    @JoinTable(name = "BLC_FULFILLMENT_OPTION_TRANSLATION_XREF",
+    @JoinTable(name = "BLC_FULFILLMENT_OPTION_TRXREF",
             joinColumns = @JoinColumn(name = "FULFILLMENT_OPTION_ID", referencedColumnName = "FULFILLMENT_OPTION_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
     @Cascade(value={org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})

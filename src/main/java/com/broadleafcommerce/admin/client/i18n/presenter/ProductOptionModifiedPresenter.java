@@ -76,7 +76,7 @@ public class ProductOptionModifiedPresenter extends ModifiedPresenterAdapter {
         getParentPresenter().getPresenterSequenceSetupManager().addOrReplaceItem(new PresenterSetupItem("productOptionTranslationMapDS", new ProductOptionTranslationMapDataSourceFactory(getParentPresenter()), new AsyncCallbackAdapter() {
             @Override
             public void onSetupSuccess(DataSource result) {
-                translationsPresenter = new MapStructurePresenter("", ((ProductOptionModiferView) getDisplay()).getTranslationsDisplay(), getMediaEntityView(), BLCMain.getMessageManager().getString("newMediaTitle"));
+                translationsPresenter = new MapStructurePresenter("", ((ProductOptionModiferView) getDisplay()).getTranslationsDisplay(), getMediaEntityView(), BLCMain.getMessageManager().getString("newTranslation"));
                 translationsPresenter.setDataSource((ListGridDataSource) result, new String[] {}, new Boolean[] {});
             }
 

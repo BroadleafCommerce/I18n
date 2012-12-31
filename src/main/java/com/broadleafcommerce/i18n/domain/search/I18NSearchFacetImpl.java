@@ -40,7 +40,7 @@ import java.util.Map;
 public class I18NSearchFacetImpl implements I18NSearchFacet {
     
     @ManyToMany(targetEntity = SearchFacetTranslationImpl.class)
-    @JoinTable(name = "BLC_SEARCH_FACET_TRANSLATION_XREF",
+    @JoinTable(name = "BLC_SEARCH_FACET_TRXREF",
             joinColumns = @JoinColumn(name = "SEARCH_FACET_ID", referencedColumnName = "SEARCH_FACET_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
     @Cascade(value={org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})

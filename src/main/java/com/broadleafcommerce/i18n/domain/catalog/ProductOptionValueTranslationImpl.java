@@ -43,7 +43,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "BLC_PRODUCT_OPTION_VALUE_TRANSLATION")
+@Table(name = "BLC_PRODUCT_OPTION_VAL_TR")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "ProductOptionTranslationImpl_friendyName")
 public class ProductOptionValueTranslationImpl implements java.io.Serializable, ProductOptionValueTranslation {
@@ -57,11 +57,11 @@ public class ProductOptionValueTranslationImpl implements java.io.Serializable, 
     @GeneratedValue(generator = "ProductOptionValueTranslationID", strategy = GenerationType.TABLE)
     @TableGenerator(name = "ProductOptionValueTranslationID", table = "SEQUENCE_GENERATOR", pkColumnName = "ID_NAME", valueColumnName = "ID_VAL", pkColumnValue = "ProductOptionValueTranslationID", allocationSize = 50)
     @Column(name = "TRANSLATION_ID")
-    @AdminPresentation(friendlyName = "ProductOptionTranslationImpl_ID", order = 1, group = "ProductOptionValueTranslationImpl_AttributeValue", groupOrder = 1, visibility = VisibilityEnum.HIDDEN_ALL)
+    @AdminPresentation(friendlyName = "ProductOptionTranslationImpl_ID", order = 1, group = "ProductOptionValueTranslationImpl_Details", groupOrder = 1, visibility = VisibilityEnum.HIDDEN_ALL)
     protected Long id;
 
     @Column(name = "ATTRIBUTE_VALUE", nullable = false)
-    @AdminPresentation(friendlyName = "Attribute_Value", order = 3, group = "ProductOptionValueTranslationImpl_AttributeValue", prominent = true, groupOrder = 1)
+    @AdminPresentation(friendlyName = "ProductOptionValueTranslationImpl_AttributeValue", order = 3, group = "ProductOptionValueTranslationImpl_Details", prominent = true, groupOrder = 1)
     protected String attributeValue;
 
     @Override
