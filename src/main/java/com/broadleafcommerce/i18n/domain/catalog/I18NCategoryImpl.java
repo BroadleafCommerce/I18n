@@ -42,7 +42,7 @@ import java.util.Map;
 public class I18NCategoryImpl implements I18NCategory {
     
 	@ManyToMany(targetEntity = CategoryTranslationImpl.class)
-    @JoinTable(name = "BLC_CATEGORY_TRANSLATION_XREF",
+    @JoinTable(name = "BLC_CATEGORY_TRXREF",
             joinColumns = @JoinColumn(name = "CATEGORY_ID", referencedColumnName = "CATEGORY_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
     @Cascade(value={org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})

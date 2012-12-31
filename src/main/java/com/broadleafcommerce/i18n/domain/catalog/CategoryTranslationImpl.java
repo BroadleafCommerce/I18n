@@ -50,7 +50,7 @@ import javax.persistence.Transient;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "BLC_CATEGORY_TRANSLATION")
+@Table(name = "BLC_CATEGORY_TR")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "blStandardElements")
 @AdminPresentationClass(populateToOneFields = PopulateToOneFieldsEnum.TRUE, friendlyName = "SearchRedirectImpl_friendyName")
 public class CategoryTranslationImpl implements java.io.Serializable, CategoryTranslation {
