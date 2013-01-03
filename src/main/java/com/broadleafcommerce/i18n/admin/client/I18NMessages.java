@@ -16,7 +16,7 @@
  * from Broadleaf Commerce, LLC.
  */
 
-package com.broadleafcommerce.admin.client.i18n;
+package com.broadleafcommerce.i18n.admin.client;
 
 import org.broadleafcommerce.openadmin.client.i18nConstants;
 

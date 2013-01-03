@@ -15,7 +15,7 @@
  * is strictly forbidden unless prior written permission is obtained
  * from Broadleaf Commerce, LLC.
  */
-package com.broadleafcommerce.admin.client.i18n.datasource;
+package com.broadleafcommerce.i18n.admin.client.datasource;
 
 
 /**

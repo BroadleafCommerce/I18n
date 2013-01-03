@@ -16,17 +16,17 @@
  * from Broadleaf Commerce, LLC.
  */
 
-package com.broadleafcommerce.admin.client.i18n;
+package com.broadleafcommerce.i18n.admin.client;
 
 import org.broadleafcommerce.openadmin.client.AbstractModule;
 import org.broadleafcommerce.openadmin.client.BLCMain;
 import org.broadleafcommerce.openadmin.client.i18nConstants;
 import org.broadleafcommerce.openadmin.client.reflection.ModuleFactory;
 
-import com.broadleafcommerce.admin.client.i18n.presenter.OneToOneProductSkuModiferView;
-import com.broadleafcommerce.admin.client.i18n.presenter.OneToOneProductSkuModifiedPresenter;
-import com.broadleafcommerce.admin.client.i18n.presenter.ProductOptionModiferView;
-import com.broadleafcommerce.admin.client.i18n.presenter.ProductOptionModifiedPresenter;
+import com.broadleafcommerce.i18n.admin.client.presenter.OneToOneProductSkuModiferView;
+import com.broadleafcommerce.i18n.admin.client.presenter.OneToOneProductSkuModifiedPresenter;
+import com.broadleafcommerce.i18n.admin.client.presenter.ProductOptionModiferView;
+import com.broadleafcommerce.i18n.admin.client.presenter.ProductOptionModifiedPresenter;
 import com.google.gwt.core.client.GWT;
 
 /**
