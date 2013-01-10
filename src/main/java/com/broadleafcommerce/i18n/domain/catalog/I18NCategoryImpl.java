@@ -41,7 +41,7 @@ import java.util.Map;
 @Embeddable
 public class I18NCategoryImpl implements I18NCategory {
     
-	@ManyToMany(targetEntity = CategoryTranslationImpl.class)
+    @ManyToMany(targetEntity = CategoryTranslationImpl.class)
     @JoinTable(name = "BLC_CATEGORY_TRXREF",
             joinColumns = @JoinColumn(name = "CATEGORY_ID", referencedColumnName = "CATEGORY_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
@@ -70,5 +70,5 @@ public class I18NCategoryImpl implements I18NCategory {
     public void setTranslations(Map<String, CategoryTranslation> translations) {
         this.translations = translations;
     }
-	
+    
 }

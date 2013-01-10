@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
            
     <!-- Entity mappings - override for extensibility -->
 
    
     <bean id="com.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation" class="com.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslationImpl" scope="prototype" />
-	<bean id="com.broadleafcommerce.i18n.domain.catalog.SkuTranslation" class="com.broadleafcommerce.i18n.domain.catalog.SkuTranslationImpl" scope="prototype" />
-	<bean id="com.broadleafcommerce.i18n.domain.search.SearchFacetTranslation" class="com.broadleafcommerce.i18n.domain.search.SearchFacetTranslationImpl" scope="prototype"/>
-	<bean id="com.broadleafcommerce.i18n.domain.catalog.CategoryTranslation" class="com.broadleafcommerce.i18n.domain.catalog.CategoryTranslationImpl" scope="prototype"/>
-	<bean id="com.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslation" class="com.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslationImpl" scope="prototype"/>
-	<bean id="com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslation" class="com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslationImpl" scope="prototype"/>
+    <bean id="com.broadleafcommerce.i18n.domain.catalog.SkuTranslation" class="com.broadleafcommerce.i18n.domain.catalog.SkuTranslationImpl" scope="prototype" />
+    <bean id="com.broadleafcommerce.i18n.domain.search.SearchFacetTranslation" class="com.broadleafcommerce.i18n.domain.search.SearchFacetTranslationImpl" scope="prototype"/>
+    <bean id="com.broadleafcommerce.i18n.domain.catalog.CategoryTranslation" class="com.broadleafcommerce.i18n.domain.catalog.CategoryTranslationImpl" scope="prototype"/>
+    <bean id="com.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslation" class="com.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslationImpl" scope="prototype"/>
+    <bean id="com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslation" class="com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslationImpl" scope="prototype"/>
 
 </beans>

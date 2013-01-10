@@ -46,7 +46,7 @@ public class MySearchFacetImpl extends SearchFacetImpl implements I18NSearchFace
         i18nExtension.setTranslations(translations);
     }
     
-	public String getLabel() {
+    public String getLabel() {
         if (getTranslations() != null && BroadleafRequestContext.hasLocale()) {
             Locale locale = BroadleafRequestContext.getBroadleafRequestContext().getLocale();
 
@@ -69,7 +69,7 @@ public class MySearchFacetImpl extends SearchFacetImpl implements I18NSearchFace
             }
         }
         return label;
-	}
+    }
     
 
 }
