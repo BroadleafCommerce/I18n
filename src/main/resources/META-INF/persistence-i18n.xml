@@ -4,12 +4,12 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
     <persistence-unit name="blPU" transaction-type="RESOURCE_LOCAL">
-        <class>com.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslationImpl</class>
-        <class>com.broadleafcommerce.i18n.domain.search.SearchFacetTranslationImpl</class>
-        <class>com.broadleafcommerce.i18n.domain.catalog.CategoryTranslationImpl</class>
-        <class>com.broadleafcommerce.i18n.domain.catalog.SkuTranslationImpl</class>
-        <class>com.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslationImpl</class>
-        <class>com.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.search.SearchFacetTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.catalog.CategoryTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.catalog.SkuTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslationImpl</class>
+        <class>org.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslationImpl</class>
         <exclude-unlisted-classes/>
     </persistence-unit>
 

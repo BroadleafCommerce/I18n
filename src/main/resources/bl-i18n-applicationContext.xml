@@ -20,32 +20,32 @@
       
                 <entry>
                     <key><value>org.broadleafcommerce.core.catalog.domain.CategoryImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveCategoryImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveCategoryImpl</value>
                 </entry>
                   
                 <entry>
                     <key><value>org.broadleafcommerce.core.catalog.domain.SkuImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveSkuImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveSkuImpl</value>
                 </entry>
                   
                 <entry>
                     <key><value>org.broadleafcommerce.core.catalog.domain.ProductOptionImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveProductOptionImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveProductOptionImpl</value>
                 </entry>
                   
                 <entry>
                     <key><value>org.broadleafcommerce.core.catalog.domain.ProductOptionValueImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveProductOptionValueImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.catalog.domain.I18nWeaveProductOptionValueImpl</value>
                 </entry>
                   
                 <entry>
                     <key><value>org.broadleafcommerce.core.order.domain.FulfillmentOptionImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.domain.I18nWeaveFulfillmentOptionImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.domain.I18nWeaveFulfillmentOptionImpl</value>
                 </entry>
                   
                 <entry>
                     <key><value>org.broadleafcommerce.core.search.domain.SearchFacetImpl</value></key>
-                    <value>com.broadleafcommerce.i18n.weave.search.domain.I18nWeaveSearchFacetImpl</value>
+                    <value>org.broadleafcommerce.i18n.weave.search.domain.I18nWeaveSearchFacetImpl</value>
                 </entry>
             </map>
         </property>

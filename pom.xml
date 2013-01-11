@@ -10,7 +10,7 @@
     <groupId>org.broadleafcommerce</groupId>
     <artifactId>broadleaf-i18n</artifactId>
     <name>BroadleafCommerce I18n</name>
-    <description>BroadleafCommerce I19n Module</description>
+    <description>BroadleafCommerce I18n Module</description>
     <version>1.0.1-SNAPSHOT</version>
 
     <properties>
