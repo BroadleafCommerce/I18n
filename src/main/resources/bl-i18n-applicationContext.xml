@@ -14,7 +14,7 @@
     <context:load-time-weaver />
 
     <bean id="blI18nClassTransformer" class="org.broadleafcommerce.common.extensibility.jpa.copy.DirectCopyClassTransformer">
-        <constructor-arg name="moduleName" value="CatalogMetaData" />
+        <constructor-arg name="moduleName" value="I18N" />
         <property name="xformTemplates">
             <map>
       
