@@ -16,14 +16,20 @@
  * from Broadleaf Commerce, LLC.
  */
 
-package org.broadleafcommerce.core.catalog.domain;
+package org.broadleafcommerce.i18n.core.catalog.domain;
 
+import org.broadleafcommerce.core.catalog.domain.Category;
+import org.broadleafcommerce.core.catalog.domain.CategoryImpl;
+import org.broadleafcommerce.core.catalog.domain.ProductOption;
+import org.broadleafcommerce.core.catalog.domain.ProductOptionImpl;
+import org.broadleafcommerce.core.catalog.domain.ProductOptionValue;
+import org.broadleafcommerce.core.catalog.domain.ProductOptionValueImpl;
+import org.broadleafcommerce.core.catalog.domain.Sku;
+import org.broadleafcommerce.core.catalog.domain.SkuImpl;
 import org.broadleafcommerce.core.order.domain.FulfillmentOptionImpl;
 import org.broadleafcommerce.core.search.domain.SearchFacet;
 import org.broadleafcommerce.core.search.domain.SearchFacetImpl;
-import org.broadleafcommerce.test.BaseTest;
-import org.testng.annotations.Test;
-
+import org.broadleafcommerce.i18n.I18nBaseTest;
 import org.broadleafcommerce.i18n.domain.catalog.CategoryTranslation;
 import org.broadleafcommerce.i18n.domain.catalog.I18NCategory;
 import org.broadleafcommerce.i18n.domain.catalog.I18NProductOption;
@@ -36,6 +42,7 @@ import org.broadleafcommerce.i18n.domain.order.FulfillmentOptionTranslation;
 import org.broadleafcommerce.i18n.domain.order.I18NFulfillmentOption;
 import org.broadleafcommerce.i18n.domain.search.I18NSearchFacet;
 import org.broadleafcommerce.i18n.domain.search.SearchFacetTranslation;
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +52,7 @@ import java.util.Map;
  * 
  * @author Andre Azzolini (apazzolini)
  */
-public class ClassTransformationTest extends BaseTest {
+public class ClassTransformationTest extends I18nBaseTest {
 
     static {
         getModuleContexts().add("bl-i18n-applicationContext.xml");
