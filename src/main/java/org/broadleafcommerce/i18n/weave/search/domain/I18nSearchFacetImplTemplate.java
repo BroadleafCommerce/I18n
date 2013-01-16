@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.broadleafcommerce.i18n.weave.catalog.domain;
+package org.broadleafcommerce.i18n.weave.search.domain;
 
 import org.broadleafcommerce.common.extensibility.jpa.copy.NonCopied;
 import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 
-import org.broadleafcommerce.i18n.domain.catalog.I18NProductOption;
-import org.broadleafcommerce.i18n.domain.catalog.I18NProductOptionImpl;
-import org.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslation;
+import org.broadleafcommerce.i18n.domain.search.I18NSearchFacet;
+import org.broadleafcommerce.i18n.domain.search.I18NSearchFacetImpl;
+import org.broadleafcommerce.i18n.domain.search.SearchFacetTranslation;
 
 import javax.persistence.Embedded;
 
@@ -32,20 +32,21 @@ import java.util.Map;
 /**
  * @author ppatel
  */
-public class I18nWeaveProductOptionImpl implements I18NProductOption {
+
+public class I18nSearchFacetImplTemplate  implements I18NSearchFacet {
 
     @Embedded
-    protected I18NProductOptionImpl i18nExtension;
+    protected I18NSearchFacetImpl i18nExtension;
 
     @NonCopied
     protected String label;
 
-    public Map<String, ProductOptionTranslation> getTranslations() {
+    public Map<String, SearchFacetTranslation> getTranslations() {
         setI18nExtension();
         return i18nExtension.getTranslations();
     }
 
-    public void setTranslations(Map<String, ProductOptionTranslation> translations) {
+    public void setTranslations(Map<String, SearchFacetTranslation> translations) {
         setI18nExtension();
         i18nExtension.setTranslations(translations);
     }
@@ -57,7 +58,7 @@ public class I18nWeaveProductOptionImpl implements I18NProductOption {
             // Search for translation based on locale
             String localeCode = locale.getLocaleCode();
             if (localeCode != null) {
-                ProductOptionTranslation translation = getTranslations().get(localeCode);
+                SearchFacetTranslation translation = getTranslations().get(localeCode);
                 if (translation != null && translation.getLabel() != null) {
                     return translation.getLabel();
                 }
@@ -66,7 +67,7 @@ public class I18nWeaveProductOptionImpl implements I18NProductOption {
             // try just the language
             String languageCode = LocaleUtil.findLanguageCode(locale);
             if (languageCode != null && !localeCode.equals(languageCode)) {
-                ProductOptionTranslation translation = getTranslations().get(languageCode);
+                SearchFacetTranslation translation = getTranslations().get(languageCode);
                 if (translation != null && translation.getLabel() != null) {
                     return translation.getLabel();
                 }
@@ -77,7 +78,8 @@ public class I18nWeaveProductOptionImpl implements I18NProductOption {
 
     protected void setI18nExtension() {
         if (i18nExtension == null) {
-            i18nExtension = new I18NProductOptionImpl();
+            i18nExtension = new I18NSearchFacetImpl();
         }
     }
+
 }

@@ -34,7 +34,7 @@ import java.util.Map;
  * @author ppatel
  */
 
-public class I18nWeaveCategoryImpl  implements I18NCategory {
+public class I18nCategoryImplTemplate  implements I18NCategory {
     @NonCopied  protected String name;
     @NonCopied  protected String description;
 

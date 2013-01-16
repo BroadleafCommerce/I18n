@@ -21,61 +21,63 @@ import org.broadleafcommerce.common.locale.domain.Locale;
 import org.broadleafcommerce.common.locale.util.LocaleUtil;
 import org.broadleafcommerce.common.web.BroadleafRequestContext;
 
-import org.broadleafcommerce.i18n.domain.catalog.I18NProductOptionValue;
-import org.broadleafcommerce.i18n.domain.catalog.I18NProductOptionValueImpl;
-import org.broadleafcommerce.i18n.domain.catalog.ProductOptionValueTranslation;
+import org.broadleafcommerce.i18n.domain.catalog.I18NProductOption;
+import org.broadleafcommerce.i18n.domain.catalog.I18NProductOptionImpl;
+import org.broadleafcommerce.i18n.domain.catalog.ProductOptionTranslation;
 
 import javax.persistence.Embedded;
 
 import java.util.Map;
 
-
 /**
  * @author ppatel
  */
-public class I18nWeaveProductOptionValueImpl implements I18NProductOptionValue {
-    
+public class I18nProductOptionImplTemplate implements I18NProductOption {
+
     @Embedded
-    protected I18NProductOptionValueImpl i18nExtension;
-    @NonCopied protected String attributeValue;
-    public Map<String, ProductOptionValueTranslation> getTranslations() {
+    protected I18NProductOptionImpl i18nExtension;
+
+    @NonCopied
+    protected String label;
+
+    public Map<String, ProductOptionTranslation> getTranslations() {
         setI18nExtension();
         return i18nExtension.getTranslations();
     }
 
-    public void setTranslations(Map<String, ProductOptionValueTranslation> translations) {
+    public void setTranslations(Map<String, ProductOptionTranslation> translations) {
         setI18nExtension();
         i18nExtension.setTranslations(translations);
     }
-    
-    public String getAttributeValue() {
-        if (getTranslations() != null && BroadleafRequestContext.hasLocale())  {
+
+    public String getLabel() {
+        if (getTranslations() != null && BroadleafRequestContext.hasLocale()) {
             Locale locale = BroadleafRequestContext.getBroadleafRequestContext().getLocale();
 
             // Search for translation based on locale
             String localeCode = locale.getLocaleCode();
             if (localeCode != null) {
-                ProductOptionValueTranslation translation = getTranslations().get(localeCode);
-                if (translation != null && translation.getAttributeValue() != null) {
-                    return translation.getAttributeValue();
+                ProductOptionTranslation translation = getTranslations().get(localeCode);
+                if (translation != null && translation.getLabel() != null) {
+                    return translation.getLabel();
                 }
             }
 
             // try just the language
             String languageCode = LocaleUtil.findLanguageCode(locale);
-            if (languageCode != null && ! localeCode.equals(languageCode)) {
-                ProductOptionValueTranslation translation = getTranslations().get(languageCode);
-                if (translation != null && translation.getAttributeValue() != null) {
-                    return translation.getAttributeValue();
+            if (languageCode != null && !localeCode.equals(languageCode)) {
+                ProductOptionTranslation translation = getTranslations().get(languageCode);
+                if (translation != null && translation.getLabel() != null) {
+                    return translation.getLabel();
                 }
             }
         }
-
-        return attributeValue;
+        return label;
     }
+
     protected void setI18nExtension() {
         if (i18nExtension == null) {
-            i18nExtension = new I18NProductOptionValueImpl();
+            i18nExtension = new I18NProductOptionImpl();
         }
     }
 }

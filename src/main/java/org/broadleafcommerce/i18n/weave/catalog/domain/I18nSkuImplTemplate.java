@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * @author ppatel
  */
-public class I18nWeaveSkuImpl implements I18NSku {
+public class I18nSkuImplTemplate implements I18NSku {
 
     @Embedded
     protected I18NSkuImpl i18nExtension;

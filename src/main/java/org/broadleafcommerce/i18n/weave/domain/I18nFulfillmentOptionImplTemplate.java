@@ -32,7 +32,7 @@ import java.util.Map;
 /**
  * @author ppatel
  */
-public class I18nWeaveFulfillmentOptionImpl implements I18NFulfillmentOption {
+public class I18nFulfillmentOptionImplTemplate implements I18NFulfillmentOption {
 
     @NonCopied
     protected String name;
