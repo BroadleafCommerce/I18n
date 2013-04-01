@@ -23,14 +23,14 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.annotations.Cascade;
 
-import javax.persistence.Column;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-
-import java.util.HashMap;
-import java.util.Map;
+import javax.persistence.MapKeyColumn;
 
 
 /**
@@ -44,7 +44,7 @@ public class I18NFulfillmentOptionImpl implements I18NFulfillmentOption {
             joinColumns = @JoinColumn(name = "FULFILLMENT_OPTION_ID", referencedColumnName = "FULFILLMENT_OPTION_ID"),
             inverseJoinColumns = @JoinColumn(name = "TRANSLATION_ID", referencedColumnName = "TRANSLATION_ID"))
     @Cascade(value={org.hibernate.annotations.CascadeType.ALL, org.hibernate.annotations.CascadeType.DELETE_ORPHAN})
-    @org.hibernate.annotations.MapKey(columns = { @Column(name = "MAP_KEY", nullable = false) })
+    @MapKeyColumn(name = "MAP_KEY")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region="blStandardElements")
     @BatchSize(size = 10)
     @AdminPresentationMap(
