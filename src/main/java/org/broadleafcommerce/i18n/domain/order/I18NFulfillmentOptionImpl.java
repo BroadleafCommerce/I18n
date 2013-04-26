@@ -49,7 +49,6 @@ public class I18NFulfillmentOptionImpl implements I18NFulfillmentOption {
     @BatchSize(size = 10)
     @AdminPresentationMap(
             friendlyName = "FulfillmentOptionImpl_Translations",
-            dataSourceName = "productOptionTranslationDS",
             keyPropertyFriendlyName = "TranslationsImpl_Key",
             deleteEntityUponRemove = true,
             mapKeyOptionEntityClass = FulfillmentOptionTranslationImpl.class,

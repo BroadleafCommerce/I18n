@@ -50,7 +50,6 @@ public class I18NCategoryImpl implements I18NCategory {
     @BatchSize(size = 10)
     @AdminPresentationMap(
             friendlyName = "categoryImpl_Translations",
-            dataSourceName = "categoryTranslationDS",
             keyPropertyFriendlyName = "TranslationsImpl_Key",
             deleteEntityUponRemove = true,
             mapKeyOptionEntityClass = LocaleImpl.class,

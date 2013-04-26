@@ -50,7 +50,6 @@ public class I18NProductOptionValueImpl implements I18NProductOptionValue {
     @BatchSize(size = 10)
     @AdminPresentationMap(
             friendlyName = "ProductOptionValueImpl_Translations",
-            dataSourceName = "productOptionValueTranslationDS",
             keyPropertyFriendlyName = "TranslationsImpl_Key",
             deleteEntityUponRemove = true,
             mapKeyOptionEntityClass = LocaleImpl.class,

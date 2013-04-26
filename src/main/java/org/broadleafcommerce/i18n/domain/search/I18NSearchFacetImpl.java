@@ -48,7 +48,6 @@ public class I18NSearchFacetImpl implements I18NSearchFacet {
     @BatchSize(size = 10)
     @AdminPresentationMap(
             friendlyName = "searchFacetImpl_Translations",
-            dataSourceName = "searchFacetTranslationDS",
             keyPropertyFriendlyName = "TranslationsImpl_Key",
             deleteEntityUponRemove = true,
             mapKeyOptionEntityClass = LocaleImpl.class,
